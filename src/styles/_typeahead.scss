@@ -1,0 +1,81 @@
+.typeahead {
+  border-radius: 3px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  font-size: 14px;
+  .toggle {
+    z-index: 1;
+  }
+  .overtext {
+    min-height: 2rem;
+    font-size: 1rem;
+    line-height: 1rem;
+    padding: 10px;
+    z-index: 3;
+    width: 12rem;
+    max-width: calc(100% - 100px);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .search {
+    cursor: text;
+    border: none;
+    outline: none;
+    z-index: 2;
+    width: calc(100% - 95px);
+    max-width: calc(100% - 84px);
+    border: 1px #ddd solid;
+    border-radius: 0.5rem;
+    &-type {
+      font-size: 0.7rem;
+    }
+    &:focus,
+    &:focus-within {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+  ul {
+    width: calc(100% - 95px);
+    max-width: calc(100% - 84px);
+    margin: 0;
+    margin-top: -2.3rem;
+    padding: 0;
+    padding-top: 2.2rem;
+    padding-left: 3px;
+    z-index: -1;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    border: #ddd 1px solid;
+    border-radius: 0.5rem !important;
+
+    // Scrollbar
+    overflow-y: scroll;
+    max-height: 25rem;
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+      border-radius: 0.5rem !important;
+    }
+
+    &::-webkit-scrollbar {
+      background-color: transparent;
+      border-radius: 0.5rem !important;
+      width: 3px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      padding: 1px;
+      margin: 2px;
+      background-color: #aaa;
+      border-radius: 0.5rem !important;
+    }
+
+    li {
+      cursor: pointer;
+      &:hover {
+        background: #ccc;
+      }
+    }
+  }
+}

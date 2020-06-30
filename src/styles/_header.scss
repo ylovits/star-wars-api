@@ -1,0 +1,32 @@
+.navbar {
+  & > div {
+    @include media-breakpoint-down(md) {
+      margin-top: 1.5rem;
+    }
+  }
+  .logo {
+    width: 120px;
+    max-width: 90%;
+  }
+  .h2 {
+    white-space: normal;
+    @include media-breakpoint-down(md) {
+      font-size: 1.2rem;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+  .search {
+    &-type {
+      font-size: 0.8rem;
+      &:focus,
+      &:focus-within {
+        outline: none;
+        box-shadow: none;
+      }
+      .label {
+        margin: 10px 0;
+      }
+    }
+  }
+}

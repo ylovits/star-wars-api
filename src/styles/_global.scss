@@ -1,0 +1,33 @@
+ul {
+  list-style: none;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.spinner {
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto 1em;
+  display: inline-block;
+  vertical-align: top;
+  svg {
+    animation: rotation 2s infinite linear;
+  }
+  svg path {
+    fill: #0e7dc2;
+  }
+}
+
+.zi-1 {
+  z-index: -1;
+  top: 4px;
+}
